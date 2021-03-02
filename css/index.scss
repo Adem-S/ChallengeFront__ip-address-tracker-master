@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+input {
+    border-style: none;
+}
+
+
+header {
+    height: 250px;
+    background: top / cover no-repeat url("../images/pattern-bg.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        color: hsl(0, 0, 95);
+        font-weight: 500;
+        font-size: 1.6em;
+    }
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    &:hover {
+        cursor: pointer;
+    }
+    &__input {
+        padding: 0.7em;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+        background: hsl(0, 0%, 96);
+        font-weight: 400;
+    }
+    &__validation {
+        background:hsl(0, 0%, 5%);
+        padding: 0.7em 1.1em;
+        border-radius: 0 10px 10px 0; 
+        &:hover {
+            background-color:  hsl(0, 0%, 17%);
+        }
+    }
+}
+
+
+.information {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    top: 180px;
+    justify-content: space-between;
+    padding: 1.5em 0;
+    background: hsl(0, 0%, 96);
+    z-index: 3;
+    margin: 0 10%;
+    border-radius: 10px;
+    min-height: 4em;
+    
+    &__part {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 1;
+        height: auto;
+        padding: 0 1.5em;
+        font-weight: 700;
+        h3 {
+            text-transform: uppercase;
+            font-size: 0.6em;
+            color: hsl(0, 0%, 59%);
+            margin-bottom: 0.8em;
+        }
+        p {
+           font-size: 1.3em;
+        }
+    }
+    &__part:not(:last-child)::after{
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 1px;
+        background: hsl(0, 0%, 70%);
+        height: 90%;
+    }
+   
+
+  
+}
+
+main {
+  position: relative;
+  height: calc(100vh - 250px);
+  #mapid {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.5em;
+    a{
+        font-size: 1em ;
+    }
+}
+
+
+
+@media  screen and (max-width: 1050px) {
+    .information__part {
+        font-size: 14px;
+    }
+
+}   
+
+@media  screen and (max-width: 800px) {
+    * {
+        font-size: 18px;
+    }
+
+    .information {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5% ;
+        top: 150px;
+        &__part {
+            align-items: center;
+            margin-bottom: 1em;
+            justify-content: center;
+            text-align: center;
+            &::after {
+                display: none;
+            }
+           
+        }
+    }
+    .search-bar {
+        width: 90%;
+        &__input::placeholder {
+            font-size: 12px;
+        }
+    }
+
+}   
+
+

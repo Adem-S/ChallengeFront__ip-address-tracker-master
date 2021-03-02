@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  border-style: none;
+}
+
+header {
+  height: 250px;
+  background: top/cover no-repeat url("../images/pattern-bg.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+}
+
+.search-bar:hover {
+  cursor: pointer;
+}
+
+.search-bar__input {
+  padding: 0.7em;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  background: whitesmoke;
+  font-weight: 400;
+}
+
+.search-bar__validation {
+  background: #0d0d0d;
+  padding: 0.7em 1.1em;
+  border-radius: 0 10px 10px 0;
+}
+
+.search-bar__validation:hover {
+  background-color: #2b2b2b;
+}
+
+.information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 80%;
+  top: 180px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em 0;
+  background: whitesmoke;
+  z-index: 3;
+  margin: 0 10%;
+  border-radius: 10px;
+  min-height: 4em;
+}
+
+.information__part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: auto;
+  padding: 0 1.5em;
+  font-weight: 700;
+}
+
+.information__part h3 {
+  text-transform: uppercase;
+  font-size: 0.6em;
+  color: #969696;
+  margin-bottom: 0.8em;
+}
+
+.information__part p {
+  font-size: 1.3em;
+}
+
+.information__part:not(:last-child)::after {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 1px;
+  background: #b3b3b3;
+  height: 90%;
+}
+
+main {
+  position: relative;
+  height: calc(100vh - 250px);
+}
+
+main #mapid {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.5em;
+}
+
+footer a {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1050px) {
+  .information__part {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 18px;
+  }
+  .information {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 5%;
+    top: 150px;
+  }
+  .information__part {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .information__part::after {
+    display: none;
+  }
+  .search-bar {
+    width: 90%;
+  }
+  .search-bar__input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .search-bar__input:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .search-bar__input::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .search-bar__input::placeholder {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
